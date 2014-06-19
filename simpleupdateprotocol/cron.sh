@@ -1,0 +1,1 @@
+59 * * * * D:\TA\www\runningTA\simpleupdateprotocol\index.php
