@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +18,44 @@
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/verticaltabs.css" rel="stylesheet" />
     
+    <style>
+		/* code for animated blinking cursor */
+		#typed-cursor{
+			opacity: 1;
+			font-weight: 100;
+			-webkit-animation: blink 0.7s infinite;
+			-moz-animation: blink 0.7s infinite;
+			-ms-animation: blink 0.7s infinite;
+			-o-animation: blink 0.7s infinite;
+			animation: blink 0.7s infinite;
+		}
+		@-keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+		@-webkit-keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+		@-moz-keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+		@-ms-keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+		@-o-keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+	</style>
+
     <style type="text/css">
     	.ui-tabs.ui-tabs-vertical {
 		    padding: 0;
@@ -91,7 +128,7 @@
 	}
 	table {
 		color:#666;
-		font-size:16px;
+		font-size:14px;
 		text-shadow: 1px 1px 0px #fff;
 		background:#eaebec;
 		margin:20px;
@@ -106,7 +143,7 @@
 		box-shadow: 0 1px 2px #d1d1d1;
 	}
 	table th {
-		padding:21px 25px 22px 25px;
+		padding:11px 15px 12px 15px;
 		border-top:1px solid #fafafa;
 		border-bottom:1px solid #e0e0e0;
 
@@ -138,7 +175,7 @@
 		border-left: 0;
 	}
 	table tr td {
-		padding:18px;
+		padding:8px;
 		border-top: 1px solid #ffffff;
 		border-bottom:1px solid #e0e0e0;
 		border-left: 1px solid #e0e0e0;
@@ -201,7 +238,7 @@
 			#touchScroller2
 			{
 				width:100%;
-				height: 330px;
+				height: 400px;
 				position: relative;
 			}
 
@@ -249,15 +286,15 @@
         </a>
         <div class="navigation responsive-menu">
             <ul>
-                <li class="home"><a href="#templatemo">Home<?php if (isset(Yii::app()->session['admin'])) {
+                <li class="home"><a href="#templatemo">Beranda<?php if (isset(Yii::app()->session['admin'])) {
 									echo ' (Admin)'; }?></a></li>
 	            <li class="services"><a href="#services">Berita<?php if (isset(Yii::app()->session['admin'])) {
 									echo ' (Admin)'; }?></a></li>
-	            <li class="about"><a href="#about">Staf<?php if (isset(Yii::app()->session['admin'])) {
+	            <li class="about"><a href="#about">Pengumuman<?php if (isset(Yii::app()->session['admin'])) {
 									echo ' (Admin)'; }?></a></li>	            
-	            <li class="portfolio"><a href="#portfolio">Beasiswa<?php if (isset(Yii::app()->session['admin'])) {
+	            <li class="portfolio"><a href="#portfolio">Jadwal<?php if (isset(Yii::app()->session['admin'])) {
 									echo ' (Admin)'; }?></a></li>
-	            <li class="contact"><a href="#contact">Contact<?php if (isset(Yii::app()->session['admin'])) {
+	            <li class="contact"><a href="#contact">Denah<?php if (isset(Yii::app()->session['admin'])) {
 									echo ' (Admin)'; }?></a></li>
             </ul> 
         </div> 
@@ -302,16 +339,16 @@
 
 		<div class="navigation">
 	        <ul class="main-menu">
-	            <li class="home"><a href="#templatemo">Home<?php if (isset(Yii::app()->session['admin'])) {
+	            <li class="home"><a href="#templatemo">Beranda<?php if (isset(Yii::app()->session['admin'])) {
 									echo ' (Admin)'; }?></a></li>
 	            <li class="services"><a href="#services">Berita<?php if (isset(Yii::app()->session['admin'])) {
 									echo ' (Admin)'; }?></a></li>
-	            <li class="about"><a href="#about">Staf<?php if (isset(Yii::app()->session['admin'])) {
+	            <li class="about"><a href="#about">Pengumuman<?php if (isset(Yii::app()->session['admin'])) {
 									echo ' (Admin)'; }?></a></li>
 	            
-	            <li class="portfolio"><a href="#portfolio">Beasiswa<?php if (isset(Yii::app()->session['admin'])) {
+	            <li class="portfolio"><a href="#portfolio">Jadwal<?php if (isset(Yii::app()->session['admin'])) {
 									echo ' (Admin)'; }?></a></li>
-	            <li class="contact"><a href="#contact">Contact<?php if (isset(Yii::app()->session['admin'])) {
+	            <li class="contact"><a href="#contact">Denah<?php if (isset(Yii::app()->session['admin'])) {
 									echo ' (Admin)'; }?></a></li>
 	        </ul>
 		</div> <!-- /.navigation -->
@@ -329,6 +366,8 @@
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.5.2.min.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/tabcordion.js"></script>
+
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/typed.js" type="text/javascript"></script>
 
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.10.3.custom.min.js"  type='text/javascript'></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.kinetic.min.js"  type='text/javascript'></script>
@@ -351,6 +390,24 @@
 	$(document).ready(function(){
 		$("#textExample").verticaltabs({speed: 500,slideShow: false,activeIndex: 2});
 		$("#imageExample").verticaltabs({speed: 1000,slideShow: true,slideShowSpeed: 3000,activeIndex: 0,playPausePos: "topRight"});
+	});
+	</script>
+
+	<script>
+	$(function(){
+
+		$("#typed").typed({
+			strings: ["SELAMAT DATANG DI TEKNIK INFORMATIKA", "INSTITUT TEKNOLOGI SEPULUH NOPEMBER"],
+			typeSpeed: 100,
+			backDelay: 5000,
+			loop: true,
+			// defaults to false for infinite loop
+			loopCount: false,
+			callback: function(){ foo(); }
+		});
+
+		function foo(){ console.log("Callback"); }
+
 	});
 	</script>
 
@@ -469,14 +526,14 @@
             });
             var nt_example1 = $('#nt-example1').newsTicker({
                 row_height: 100,
-                max_rows: 1,
+                max_rows: 2,
                 duration: 6000,
                 prevButton: $('#nt-example1-prev'),
                 nextButton: $('#nt-example1-next')
             });
 			var nt_example11 = $('#nt-example11').newsTicker({
-                row_height: 100,
-                max_rows: 3,
+                row_height: 500,
+                max_rows: 1,
                 duration: 5000,
                 prevButton: $('#nt-example11-prev'),
                 nextButton: $('#nt-example11-next')
@@ -611,4 +668,3 @@
 		</script>
 </body>
 </html>
-

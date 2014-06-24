@@ -3,7 +3,7 @@ body
 	margin: 0;
 	padding: 0;
 	color: #555;
-	font: normal 16pt Arial,Helvetica,sans-serif;
+	font: normal 24pt Arial,Helvetica,sans-serif;
 	background: #EFEFEF;
 }
 
@@ -67,7 +67,7 @@ body
 {
 	color:#ffffff;
 	background-color:transparent;
-	font-size:16px;
+	font-size:24px;
 	font-weight:bold;
 	text-decoration:none;
 	padding:5px 8px;
