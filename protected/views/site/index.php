@@ -9,7 +9,7 @@
 									<span id="typed"></span>
 								</h1></b>							
 
-								<p>
+								<div style="font-size: 20px;">
 									<div id="nt-example1-container">
 										<i class="fa fa-arrow-up" id="nt-example1-prev"></i>		                
 											<ul id="nt-example1">
@@ -17,7 +17,7 @@
 													$count = 0;
 													if($berita) {
 														foreach ($berita as $key) {
-															echo "<li> <b> ". $key->name."</b> ".$key->text."</li>";
+															echo "<li> <b> ". $key->name.":</b> ".$key->text."</li>";
 															/*if(strpos($key->source, 'Twitter') !== false) {
 																echo "<li> ".$key->text."</li>";
 															}
@@ -32,7 +32,7 @@
 							                </ul>
 						                <i class="fa fa-arrow-down" id="nt-example1-next"></i>
 					            </div>
-								</p>
+								</div>
 							</div>
 							<img src="images/if-its.jpg" alt="Slide 1">
 						</li>						
@@ -44,7 +44,32 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="welcome-text">
-							
+							<center>
+							<div id="wxWrap" style="font-size: 26px;">								
+								    <span id="wxIntro">
+								        Cuaca Surabaya <?php echo date('d M Y');?>: 
+								    </span>
+								    <br />
+								    <span id="wxIcon2"></span>
+								    <span id="wxTemp"></span>								
+							</div>
+							</center>
+
+							<br /><br />
+
+							<ul id="ticker01">
+								<div style="font-size: 32px;">
+								<li><span>10/10/2007</span><a href="#">The first thing ...</a></li>
+								<li><span>10/10/2007</span><a href="#">End up doing is ...</a></li>
+								<li><span>10/10/2007</span><a href="#">The code that you ...</a></li>
+								<li><span>10/10/2007</span><a href="#">The code that you23 ...</a></li>
+								<li><span>10/10/2007</span><a href="#">The code that you324 ...</a></li>
+								<li><span>10/10/2007</span><a href="#">...............................</a></li>
+								</div>
+								<!-- eccetera -->
+							</ul>
+
+							<br />
 							
 							
 						</div>
@@ -89,7 +114,7 @@
 												echo "<div>"."<table>";
 
 												echo "<tr>";
-												echo "<th align=\"center\">Berita</th>";
+												echo "<th align=\"center\"><center>Berita</center></th>";
 												if(isset(Yii::app()->session['admin'])) {
 													echo "<th>Hapus</th>";	
 												}										
@@ -111,7 +136,7 @@
 											if($row==6) {
 												$row = 1;
 												echo "<tr>";
-												echo "<td align=\"center\" colspan=\"2\">".$now." dari ".$total_tabel." tabel</td>";
+												echo "<td align=\"center\" colspan=\"2\"><center>".$now." dari ".$total_tabel." tabel</center></td>";
 												echo "</tr>";
 												$now++;
 												echo "</table></div>";
@@ -124,17 +149,9 @@
 										echo "<div>"."Tidak ada berita yang ditampilkan"."</div>";
 								?>							
 						</div>
-						Geser tabel ke kanan dan ke kiri untuk melihat keseluruhan berita
+						<center><p>Geser tabel ke kanan dan ke kiri untuk melihat keseluruhan berita</p></center>
 					</div>
-				</div>	
-				
-
-				<div class="row">
-				<div>
-
-				
-				</div>
-				</div>
+				</div>			
 							
 				
 				<div class="row our-skills">
@@ -148,13 +165,20 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="section-title">
-							<h2>Staf</h2>
+							<h2>Pengumuman</h2>
 						</div>
 					</div>
 				</div>
-
 				<div class="row">
-								
+					<div class="slideshow">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/pengumuman/1 Juni.jpg" width="432" height="632" alt="1 Juni 2014" />
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/pengumuman/6 Juni.jpg" width="432" height="632" alt="6 Juni 2014" />
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/pengumuman/6 Juni 2.jpg" width="432" height="632" alt="6 Juni 2014" />
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/pengumuman/18 Juni.jpg" width="432" height="632" alt="18 Juni 2014" />
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/pengumuman/23 Juni.jpg" width="432" height="632" alt="23 Juni 2014" />
+					</div>
+					<p id="caption" align="center"></p>
+
 				</div>
 			</div> <!-- /#about -->
 
@@ -218,13 +242,9 @@
 									    echo "</tr>";
 									}
 								    $countrv++;
-								}
-								 
+								}								 
 								echo "</table>";
-
-								?>
-
-							
+								?>							
 							</div>
 
 					    </div>
@@ -233,6 +253,9 @@
 					    <div class="uas">
 					    </div>
 					    <div class="ta">
+
+					    	<table><tr><th width="150">WAKTU</th><th>KBK</th><th>RUANGAN</th><th>NRP</th><th width="150">MAHASISWA</th><th width="170">PEMBIMBING 1</th><th width="170">PEMBIMBING 2</th><th width="170">PENGUJI 1</th><th width="170">PENGUJI 2</th><th>JUDUL</th></tr><tr class="rowB"><td>Senin, 16 Juni 2014 Pukul 09:00-10:00</td><td>KCV</td><td>Ruang Rapat IF-215</td><td>5110100218</td><td>INES DWI ANDINI</td><td>AHMAD SAIKHU, S.Si., M.T.</td><td>RULLY SOELAIMAN, S.Kom., M.Kom.</td><td>BILQIS AMALIAH, S.Kom., M.Kom.</td><td>DIANA PURWITASARI, S.Kom., M.Sc.</td><td>Optimasi Unit Layanan Magnetic Resonance Imaging Berbasis Metode Monte Carlo dan Pemrograman Dinamis</td></tr><tr class="rowA"><td>Senin, 16 Juni 2014 Pukul 10:00-11:00</td><td>KCV</td><td>Ruang Rapat IF-215</td><td>5110100164</td><td>TEGUH SURYO SANTOSO</td><td>AHMAD SAIKHU, S.Si., M.T.</td><td>RULLY SOELAIMAN, S.Kom., M.Kom.</td><td>BILQIS AMALIAH, S.Kom., M.Kom.</td><td>DIANA PURWITASARI, S.Kom., M.Sc.</td><td>Desain dan Analisis Algoritma Modifikasi Hungarian untuk Permasalahan Penugasan Dinamis pada Studi Kasus Permasalahan SPOJ Klasik 12749</td></tr><tr class="rowB"><td>Senin, 16 Juni 2014 Pukul 11:00-12:00</td><td>KCV</td><td>Ruang Rapat IF-215</td><td>5109100024</td><td>NURUL KUSUMANINGSIH</td><td>AHMAD SAIKHU, S.Si., M.T.</td><td>RULLY SOELAIMAN, S.Kom., M.Kom.</td><td>BILQIS AMALIAH, S.Kom., M.Kom.</td><td>DIANA PURWITASARI, S.Kom., M.Sc.</td><td>Implementasi metode dua fase pada persoalan multiobyektif dengan studi kasus : permaslahan penugasan</td></tr><tr class="rowA"><td>Kamis, 19 Juni 2014 Pukul 08:00-09:00</td><td>NCC</td><td>Ruang Rapat IF-215</td><td>5110100054</td><td>DIMAS PRABOWO</td><td>ARY MAZHARUDDIN S., S.Kom., M.Comp.Sc.</td><td>BASKORO ADI PRATOMO, S.Kom, M.Kom. </td><td>HENNING TITI CIPTANINGTYAS, S.Kom., M.Kom.</td><td>HUDAN STUDIAWAN, S.Kom., M.Kom. </td><td>Sistem Peringatan Dini Terjadinya Tsunami Menggunakan Deteksi Pergerakan Air dan Kedalaman Air dengan Sensor Accelerometer dan Sensor Ultrasonic pada Mikrokontroler Arduino</td></tr><tr class="rowB"><td>Kamis, 19 Juni 2014 Pukul 08:00-09:00</td><td>KCV</td><td>Ruang Rapat IF-217</td><td>5110100160</td><td>MUNAWAROH</td><td>Dr. CHASTINE FATICHAH, S.Kom., M.Kom.</td><td>RULLY SOELAIMAN, S.Kom., M.Kom.</td><td>AHMAD SAIKHU, S.Si., M.T.</td><td>BILQIS AMALIAH, S.Kom., M.Kom.</td><td>Implementasi Segmentasi Citra dengan metode Fuzzy Co-Clustering dan Particle Swarm Optimization pada Ruang Warna CIELAB</td></tr><tr class="rowA"><td>Kamis, 19 Juni 2014 Pukul 09:00-10:00</td><td>NCC</td><td>Ruang Rapat IF-215</td><td>5109100146</td><td>MUHAMMAD HAQQI WICAKSONO</td><td>ARY MAZHARUDDIN S., S.Kom., M.Comp.Sc.</td><td>HUDAN STUDIAWAN, S.Kom., M.Kom. </td><td>HENNING TITI CIPTANINGTYAS, S.Kom., M.Kom.</td><td>BASKORO ADI PRATOMO, S.Kom, M.Kom. </td><td>Sistem Keamanan Rumah Menggunakan Sensor Ultrasonik, RFID, dan Kamera Pengawas Dengan Alert Berupa MMS</td></tr><tr class="rowB"><td>Kamis, 19 Juni 2014 Pukul 09:00-10:00</td><td>KCV</td><td>Ruang Rapat IF-217</td><td>5108100705</td><td>LENA SARTIKA CAPAH</td><td>AHMAD SAIKHU, S.Si., M.T.</td><td>RULLY SOELAIMAN, S.Kom., M.Kom.</td><td>BILQIS AMALIAH, S.Kom., M.Kom.</td><td>Dr. CHASTINE FATICHAH, S.Kom., M.Kom.</td><td>Implementasi Metode Fase I Max flow dan Positif Cut untuk Menyelesaikan Masalah Kelayakan</td></tr><tr class="rowA"><td>Kamis, 19 Juni 2014 Pukul 10:00-11:00</td><td>NCC</td><td>Ruang Rapat IF-215</td><td>5109100054</td><td>FANDIASA KORUMA KOSTRADA</td><td>ARY MAZHARUDDIN S., S.Kom., M.Comp.Sc.</td><td>TOHARI AHMAD, S.Kom., MIT., Ph.D.</td><td>HENNING TITI CIPTANINGTYAS, S.Kom., M.Kom.</td><td>HUDAN STUDIAWAN, S.Kom., M.Kom. </td><td>Perancangan Sistem Keamanan Tempat Parkir Dengan Menggunakan Smart Gate</td></tr><tr class="rowB"><td>Kamis, 19 Juni 2014 Pukul 10:00-11:00</td><td>KCV</td><td>Ruang Rapat IF-217</td><td>5110100114</td><td>FARAH NURUL ILMA</td><td>BILQIS AMALIAH, S.Kom., M.Kom.</td><td>AHMAD SAIKHU, S.Si., M.T.</td><td>Dr.tech. Ir. R.V.HARI GINARDI, M.Sc.</td><td>Dr. CHASTINE FATICHAH, S.Kom., M.Kom.</td><td>Implementasi Penggunaan Bilangan Fuzzy Trapezoidal untuk Mencari Jalur Kritis pada Jaringan Proyek Fuzzy</td></tr><tr class="rowA"><td>Kamis, 19 Juni 2014 Pukul 11:00-12:00</td><td>KCV</td><td>Ruang Rapat IF-217</td><td>5110100117</td><td>OLYN RIPTIANINGDYAH</td><td>BILQIS AMALIAH, S.Kom., M.Kom.</td><td>Dr. CHASTINE FATICHAH, S.Kom., M.Kom.</td><td>Dr.tech. Ir. R.V.HARI GINARDI, M.Sc.</td><td>AHMAD SAIKHU, S.Si., M.T.</td><td>Implementasi metode Node Combination untuk menemukan rute terpendek</td></tr><tr class="rowB"><td>Kamis, 19 Juni 2014 Pukul 13:00-14:00</td><td>NCC</td><td>Ruang Rapat IF-215</td><td>5110100016</td><td>BASTIAN AJRIYA ERYANA</td><td>Ir. MUCHAMMAD HUSNI, M.Kom.</td><td>HENNING TITI CIPTANINGTYAS, S.Kom., M.Kom.</td><td>Dr.Eng. RADITYO ANGGORO, S.Kom., M.Sc.</td><td>BASKORO ADI PRATOMO, S.Kom, M.Kom. </td><td>Rancang Bangun Perangkat Lunak Pencarian Audio Fingerprint Lagu pada Server Data Terdistribusi</td></tr><tr class="rowA"><td>Kamis, 19 Juni 2014 Pukul 14:00-15:00</td><td>NCC</td><td>Ruang Rapat IF-215</td><td>5109100005</td><td>RESTO AJIE SUYANTO</td><td>Ir. MUCHAMMAD HUSNI, M.Kom.</td><td>HENNING TITI CIPTANINGTYAS, S.Kom., M.Kom.</td><td>Dr.Eng. RADITYO ANGGORO, S.Kom., M.Sc.</td><td>BASKORO ADI PRATOMO, S.Kom, M.Kom. </td><td>Sistem Manajemen Pembelajaran Real Time Berbasis Konferensi Web Menggunakan Moodle dan BigBlueButton</td></tr><tr class="rowB"><td>Jumat, 20 Juni 2014 Pukul 08:00-09:00</td><td>KCV</td><td>Ruang Rapat IF-217</td><td>5108100703</td><td>MUJAAHIDAH AS SAYFULLOOH.</td><td>ANNY YUNIARTI, S.Kom., M.Comp.Sc.</td><td>Dr. AGUS ZAINAL ARIFIN, S.Kom., M.Kom.</td><td>Dr. CHASTINE FATICHAH, S.Kom., M.Kom.</td><td>WIJAYANTI NURUL K.,S.Kom., M.Sc.</td><td>Implementasi Evaluasi Performa Struktural Algoritma Deteksi Struktur Garis Lengkung</td></tr><tr class="rowA"><td>Jumat, 20 Juni 2014 Pukul 09:00-10:00</td><td>NCC</td><td>Ruang Rapat IF-215</td><td>5110100123</td><td>FAJRI RAHMAT</td><td>ARY MAZHARUDDIN S., S.Kom., M.Comp.Sc.</td><td>HUDAN STUDIAWAN, S.Kom., M.Kom. </td><td>ROYYANA MUSLIM IJTIHADIE, S.Kom., M.Kom., PhD.</td><td>BASKORO ADI PRATOMO, S.Kom, M.Kom. </td><td>Sistem Pendeteksi dan Pencegah Peretasan terhadap Aplikasi Berbasis Web dengan Teknik Web Application Firewall (WAF)</td></tr><tr class="rowB"><td>Jumat, 20 Juni 2014 Pukul 09:00-10:00</td><td>KCV</td><td>Ruang Rapat IF-217</td><td>5110100178</td><td>ASTRIS DYAH PERWITA</td><td>Dr. CHASTINE FATICHAH, S.Kom., M.Kom.</td><td>RULLY SOELAIMAN, S.Kom., M.Kom.</td><td>Dr. AGUS ZAINAL ARIFIN, S.Kom., M.Kom.</td><td>WIJAYANTI NURUL K.,S.Kom., M.Sc.</td><td>Implementasi Penggabungan Algoritma SVM-SA Pada Permasalah Klasifikasi Pola</td></tr><tr class="rowA"><td>Jumat, 20 Juni 2014 Pukul 10:00-11:00</td><td>NCC</td><td>Ruang Rapat IF-215</td><td>5110100011</td><td>HAPPY AYU CHRISTIANTY</td><td>ARY MAZHARUDDIN S., S.Kom., M.Comp.Sc.</td><td>BASKORO ADI PRATOMO, S.Kom, M.Kom. </td><td>ROYYANA MUSLIM IJTIHADIE, S.Kom., M.Kom., PhD.</td><td>HUDAN STUDIAWAN, S.Kom., M.Kom. </td><td>Aplikasi Pendeteksi Pembajakan Akun Twitter Menggunakan Pemodelan Mandatory dan Optional</td></tr><tr class="rowB"><td>Jumat, 20 Juni 2014 Pukul 10:00-11:00</td><td>KCV</td><td>Ruang Rapat IF-217</td><td>5110100095</td><td>ETTYC JUHARWIDYNINGSIH</td><td>Dr. CHASTINE FATICHAH, S.Kom., M.Kom.</td><td>WIJAYANTI NURUL K.,S.Kom., M.Sc.</td><td>Dr. AGUS ZAINAL ARIFIN, S.Kom., M.Kom.</td><td>ISYE ARIESHANTI, S.Kom, M.Phil.</td><td>Pengenalan Pola Tulisan Tangan Angka dan Operasi Matematika Menggunakan Two-Stage Fuzzy C-Means berdasarkan Zernike Moments</td></tr><tr class="rowA"><td>Jumat, 20 Juni 2014 Pukul 13:00-14:00</td><td>KCV</td><td>Ruang Rapat IF-217</td><td>5110100078</td><td>I GUSTI FAUZI GERI SATRIA</td><td>ISYE ARIESHANTI, S.Kom, M.Phil.</td><td>Dr. Eng. NANIK SUCIATI, S.Kom., M.Kom.</td><td>Dr. CHASTINE FATICHAH, S.Kom., M.Kom.</td><td>ABDUL MUNIF, S.Kom., M.Sc.</td><td>Implementasi Metode Ranking-based KNN untuk Klasifikasi Impresi Multi-label pada Citra Batik</td></tr><tr class="rowB"><td>Senin, 23 Juni 2014 Pukul 10:00-11:00</td><td>RPL</td><td>Ruang Rapat IF-217</td><td>5110100709</td><td>CHAIRAJA ALMAS DJENI</td><td>Prof. Drs.Ec. Ir. RIYANARTO SARNO, M.Sc., Ph.D. </td><td>DWI SUNARYONO, S.Kom., M.Kom.</td><td>Dr. Ir. SITI ROCHIMAH, M.T.</td><td>ABDUL MUNIF, S.Kom., M.Sc.</td><td>Rancang Bangun Workflow Management System pada kasus ERP</td></tr><tr class="rowA"><td>Senin, 23 Juni 2014 Pukul 11:00-12:00</td><td>RPL</td><td>Ruang Rapat IF-217</td><td>5110100190</td><td>FERNANDES P. SINAGA</td><td>Prof. Drs.Ec. Ir. RIYANARTO SARNO, M.Sc., Ph.D. </td><td>ABDUL MUNIF, S.Kom., M.Sc.</td><td>Dr. Ir. SITI ROCHIMAH, M.T.</td><td>DWI SUNARYONO, S.Kom., M.Kom.</td><td>Rancang Bangun Fuzzy Association Rule Miner untuk Mendeteksi Fraud pada Proses Bisnis Enterprise Resource Planning (ERP)</td></tr><tr class="rowB"><td>Senin, 23 Juni 2014 Pukul 13:00-14:00</td><td>RPL</td><td>Ruang Rapat IF-217</td><td>5110100094</td><td>MOHAMMAD FARID NAUFAL</td><td>Prof. Drs.Ec. Ir. RIYANARTO SARNO, M.Sc., Ph.D. </td><td>--</td><td>Dr. Ir. SITI ROCHIMAH, M.T.</td><td>DWI SUNARYONO, S.Kom., M.Kom.</td><td>Penerapan Metode Proses Mining Pada Ontologi Event Log Untuk Mendeteksi Fraud pada Proses Bisnis ERP</td></tr><tr class="rowA"><td>Selasa, 24 Juni 2014 Pukul 10:00-11:00</td><td>RPL</td><td>Ruang Rapat IF-215</td><td>5110100130</td><td>QOTRUN NADA HAROEN</td><td>SARWOSRI, S.Kom., M.T.</td><td>RIZKY JANUAR AKBAR, S.Kom., M.Eng.</td><td>RIDHO RAHMAN H., S.Kom., M.Sc.</td><td>RATIH NUR ESTI A.,S.Kom., M.Sc.</td><td>ZIARAH: Aplikasi Berbagi Informasi dan Rekomendasi Urutan Kunjungan Tempat Wisata Ziarah</td></tr><tr class="rowB"><td>Selasa, 24 Juni 2014 Pukul 11:00-12:00</td><td>RPL</td><td>Ruang Rapat IF-215</td><td>5110100132</td><td>FADLIKA DITA NURJANTO</td><td>SARWOSRI, S.Kom., M.T.</td><td>RIDHO RAHMAN H., S.Kom., M.Sc.</td><td>RATIH NUR ESTI A.,S.Kom., M.Sc.</td><td>RIZKY JANUAR AKBAR, S.Kom., M.Eng.</td><td>Perancangan dan Pembangunan Perangkat Lunak ITS Touring View Menggunakan Based Location Augmented Reality Pada Perangkat Bergerak Berbasis Android</td></tr><tr class="rowA"><td>Rabu, 25 Juni 2014 Pukul 08:00-09:00</td><td>RPL</td><td>Ruang Rapat IF-215</td><td>5110100155</td><td>HELENA NADIA PRATIWI</td><td>DWI SUNARYONO, S.Kom., M.Kom.</td><td>ABDUL MUNIF, S.Kom., M.Sc.</td><td>DANIEL ORANOVA S., S.Kom., M.Sc., P.D.Eng.</td><td>Dr.Eng. RADITYO ANGGORO, S.Kom., M.Sc.</td><td>Implementasi Metode Klasifikasi Fuzzy dalam Pengelompokan Posting Grup Lapak Jual Beli pada Facebook untuk Mempermudah Pencarian Informasi Barang</td></tr><tr class="rowB"><td>Rabu, 25 Juni 2014 Pukul 09:00-10:00</td><td>RPL</td><td>Ruang Rapat IF-215</td><td>5110100165</td><td>ADAM GEGI YOWANDA</td><td>DWI SUNARYONO, S.Kom., M.Kom.</td><td>RIDHO RAHMAN H., S.Kom., M.Sc.</td><td>DANIEL ORANOVA S., S.Kom., M.Sc., P.D.Eng.</td><td>NURUL FAJRIN A.,S.Kom., M.Sc.</td><td>Rancang Bangun Aplikasi Papan Tulis Virtual dengan Menggunakan Leap Motion.</td></tr><tr class="rowA"><td>Rabu, 25 Juni 2014 Pukul 10:00-11:00</td><td>RPL</td><td>Ruang Rapat IF-215</td><td>5110100220</td><td>RAMADHANI TEGAR PERKASA</td><td>DWI SUNARYONO, S.Kom., M.Kom.</td><td>RIDHO RAHMAN H., S.Kom., M.Sc.</td><td>DANIEL ORANOVA S., S.Kom., M.Sc., P.D.Eng.</td><td>NURUL FAJRIN A.,S.Kom., M.Sc.</td><td>Perancangan Pembuatan Perangkat Lunak Digital Signage untuk Layanan Informasi Seputar Kampus Teknik Informatika ITS dengan Menggunakan Media Kontroler Kinect</td></tr><tr class="rowB"><td>Rabu, 25 Juni 2014 Pukul 13:00-14:00</td><td>RPL</td><td>Ruang Rapat IF-215</td><td>5110100202</td><td>MUHAMMAD HANIF B</td><td>IMAM KUSWARDAYAN, S.Kom, M.T.</td><td>RIDHO RAHMAN H., S.Kom., M.Sc.</td><td>DIANA PURWITASARI, S.Kom., M.Sc.</td><td>DANIEL ORANOVA S., S.Kom., M.Sc., P.D.Eng.</td><td>Eksplorasi Leap Motion untuk Pembuatan Game Interaktif "Catch the Bugs"</td></tr></table>
+
 					    </div>
 					    <div class="tesis">
 					    </div>
@@ -247,16 +270,84 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="section-title">
-							<h2>Contact Us</h2>
+							<h2>Denah</h2>
 						</div> <!-- /.section-title -->
 					</div> <!-- /.col-md-12 -->
 				</div> <!-- /.row -->
 				<div class="row">
 					<div class="col-md-12">
-						<div class="map-holder">
-							<div class="google-map-canvas" id="map-canvas" style="height: 400px;">
-                    		</div>
-						</div> <!-- /.map-holder -->
+						<center>
+						<table>
+							<tr> 
+								<th>Denah Lantai 3</th>
+								<th rowspan="2"> 
+									<div class='box' id='rpl'> 
+									Laboratorium Rekayasa Perangkat Lunak<br />
+									Ruang IF-301 <br />
+									Kepala Laboratorium: Siti Rochimah <br />
+									Teknisi Laboratorium: Djumali <br />
+									Riset:
+
+									 </div>
+									
+									<div class='box' id='kbj'> 
+									Laboratorium Komputasi Berbasis Jaringan<br />
+									Ruang IF-302 <br />
+									Kepala Laboratorium: Tohari <br />
+									Teknisi Laboratorium: Djumali <br />
+									Riset:
+									
+									</div>
+
+									<div class='box' id='ibs'> 
+									Laboratorium Sistem Cerdas<br />
+									Ruang IF-303 <br />
+									Kepala Laboratorium:  <br />
+									Teknisi Laboratorium:  <br />
+									Riset:
+									
+									</div>
+
+									<div class='box' id='lp'> 
+									Laboratorium Pemrograman<br />
+									Ruang IF-304 <br />
+									Kepala Laboratorium: Sarwosri <br />
+									Teknisi Laboratorium:  <br />
+									Riset:
+									
+									</div>
+
+									<div class='box' id='hima'> 
+									Ruang Himpunan Teknik Computer-Informatika ITS<br />
+									
+									</div>
+
+
+
+									
+
+								</th>
+							</tr>
+							<tr>
+							<td>
+								<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/map-floor3.png" width="460" height="507" alt="Lantai 3" usemap="#lantai3">
+
+								<ul class="contentLinks">
+								<map name="lantai3">
+								  <li><area shape="rect" coords="0,0,76,91" href="#rpl" alt="RPL"></li>
+								  <li><area shape="rect" coords="78,1,150,89" href="#kbj" alt="KBJ"></li>	
+								  <li><area shape="rect" coords="153,1,226,90" href="#ibs" alt="IBS"></li>						  
+								  <li><area shape="rect" coords="228,1,323,90" href="#lp" alt="LP"></li>						  
+								  <li><area shape="rect" coords="367,22,434,78" href="#hima" alt="HMTC"></li>						  
+
+								  
+								</map>
+								</ul>
+							</td>						    
+							
+							</tr>
+						</table>
+					</center>
 					</div> <!-- /.col-md-12 -->
 				</div> <!-- /.row -->
 				
@@ -287,69 +378,7 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-6">
-							<?php 
-							if(!isset(Yii::app()->session['admin'])) {
-							?>
-							<div id="showmenu">Log in sebagai administrator</div>
 							
-							<div class="menu" style="display: none;">
-								<div class="form">
-								</br >
-								<?php $form=$this->beginWidget('CActiveForm', array(
-									'id'=>'login-form',
-									'enableClientValidation'=>true,
-									'clientOptions'=>array(
-										'validateOnSubmit'=>true,
-									),
-								)); ?>
-									<table align="center">
-										<tr>
-											<td>
-												<?php echo $form->labelEx($model,'username'); ?>
-											</td>
-											<td>
-												<?php echo $form->textField($model,'username'); ?>
-												<?php echo $form->error($model,'username'); ?>
-											</td>
-										</tr>
-
-										<tr>
-											<td>
-												<?php echo $form->labelEx($model,'password'); ?>
-											</td>
-											<td>
-												<?php echo $form->passwordField($model,'password'); ?>
-												<?php echo $form->error($model,'password'); ?>
-											</td>
-										</tr>
-
-										<tr>
-											<td>											
-												
-											</td>
-											<td>
-												<?php echo $form->checkBox($model,'rememberMe'); ?>
-												<?php echo $form->label($model,'rememberMe'); ?>
-												<?php echo $form->error($model,'rememberMe'); ?>
-											</td>
-											
-										</tr>
-
-										<tr>
-											<td>
-											</td>
-											<td>
-												<?php echo CHtml::submitButton('Login'); ?>
-											</td>
-											
-										</tr>
-									</table>
-
-								<?php $this->endWidget(); ?>
-								</div><!-- form -->
-								<br />
-							</div>
-							<?php } ?>
 							<p class="copyright">Copyright © 2014 <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/logout"> Jurusan Teknik Informatika</a>
                             </p>
 						</div> <!-- /.col-md-6 -->

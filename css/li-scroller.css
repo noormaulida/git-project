@@ -1,0 +1,43 @@
+/* liScroll styles */
+
+.tickercontainer { 
+border:0px solid #000;
+background: #fff; 
+width: 1250px; 
+height: 45px; 
+margin: 0; 
+padding: 0;
+overflow: hidden; 
+}
+.tickercontainer .mask { 
+position: relative;
+left: 10px;
+top: 8px;
+width: 1250px;
+overflow: hidden;
+}
+ul.newsticker { 
+position: relative;
+left: 1050px;
+font: bold 32px;
+list-style-type: none;
+margin: 0;
+padding: 0;
+
+}
+ul.newsticker li {
+float: left; 
+margin: 0;
+padding: 0;
+background: #fff;
+}
+ul.newsticker a {
+white-space: nowrap;
+padding: 0;
+color: #000033;
+font: bold 32px;
+margin: 0 50px 0 0;
+} 
+ul.newsticker span {
+margin: 0 10px 0 0;
+} 

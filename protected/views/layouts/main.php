@@ -10,16 +10,78 @@
 	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/font-w.min.css">
 	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/misc.css">
 	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css?version=10">
-	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	
     <!-- Custom styles for this template -->
     <!--<link href="<?php //echo Yii::app()->request->baseUrl; ?>/css/mains.css" rel="stylesheet">-->
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/font-awesome.min.css" rel="stylesheet">
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/prism.css" rel="stylesheet" />
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/verticaltabs.css" rel="stylesheet" />
+    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/li-scroller.css?version=10" rel="stylesheet" />
+
+    <style type="text/css">
+		.slideshow { height: 632px; width: 432px; margin: auto }
+		.slideshow img { padding: 10px; border: 1px solid #ccc; background-color: #eee; }
+	</style>
+
+	<style type="text/css">
+		#wxWrap {
+		    width: 400px;
+		    background: #EEE; /* Old browsers */
+		    background: -moz-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(224,224,224,1) 100%); /* FF3.6+ */
+		    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,240,240,1)), color-stop(100%,rgba(224,224,224,1))); /* Chrome,Safari4+ */
+		    background: -webkit-linear-gradient(top, rgba(240,240,240,1) 0%,rgba(224,224,224,1) 100%); /* Chrome10+,Safari5.1+ */
+		    background: -o-linear-gradient(top, rgba(240,240,240,1) 0%,rgba(224,224,224,1) 100%); /* Opera11.10+ */
+		    background: -ms-linear-gradient(top, rgba(240,240,240,1) 0%,rgba(224,224,224,1) 100%); /* IE10+ */
+		    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#e0e0e0',GradientType=0 ); /* IE6-9 */
+		    background: linear-gradient(top, rgba(240,240,240,1) 0%,rgba(224,224,224,1) 100%); /* W3C */
+		    padding: 2px 13px 2px 11px;
+		    -webkit-border-radius: 4px;
+		    -moz-border-radius: 4px;
+		    border-radius: 4px;
+		}
+		#wxIntro {
+		    display: inline-block;
+		    font: 14px/20px ;
+		    color: #666;
+		    vertical-align: top;
+		    padding-top: 9px;
+		}
+		#wxIcon {
+		    display: inline-block;
+		    width: 61px;
+		    height: 34px;
+		    margin: 2px 0 -1px 1px;
+		    overflow: hidden;
+		    background: url('http://l.yimg.com/a/lib/ywc/img/wicons.png') no-repeat 61px 0;
+		}
+		#wxIcon2 {
+		    display: inline-block;
+		    width: 34px;
+		    height: 34px;
+		    margin: 1px 6px 0 8px;
+		    overflow: hidden;
+		}
+		#wxTemp {
+		    display: inline-block;
+		    font: 20px/28px Arial,Verdana,sans-serif;
+		    color: #333;
+		    vertical-align: top;
+		    padding-top: 5px;
+		    margin-left: 0;
+		}
+		</style>
+
+	<style type='text/css'>
+      .hidden {
+        display: none;
+    }
+    .contentLinks {
+        list-style-type: none;
+    }
+    </style>
     
     <style>
-		/* code for animated blinking cursor */
 		#typed-cursor{
 			opacity: 1;
 			font-weight: 100;
@@ -210,6 +272,7 @@
 
 	</style>
 
+
 	<link rel="Stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/smoothTouchScroll.css" />
 		
 		<!-- Styles for my specific scrolling content -->
@@ -351,24 +414,22 @@
 	            <li class="contact"><a href="#contact">Denah<?php if (isset(Yii::app()->session['admin'])) {
 									echo ' (Admin)'; }?></a></li>
 	        </ul>
-		</div> <!-- /.navigation -->
-
-	</div> <!-- /#main-sidebar -->
+		</div> 
+	</div> 
 
 
 	<?php echo $content; ?>
-
+	
 
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.10.2.min.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.singlePageNav.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.flexslider.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.prettyPhoto.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js"></script>
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.5.2.min.js"></script>
+	<!--<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.5.2.min.js"></script>-->
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/tabcordion.js"></script>
-
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/typed.js" type="text/javascript"></script>
-
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.li-scroller.1.0.js" type="text/javascript"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.10.3.custom.min.js"  type='text/javascript'></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.kinetic.min.js"  type='text/javascript'></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.smoothTouchScroll.min.js"  type='text/javascript'></script>
@@ -376,7 +437,6 @@
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.steps.min.js" ></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.steps.js"></script>
 	<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
-
 	<script type='text/javascript' src='<?php echo Yii::app()->request->baseUrl; ?>/js/logging.js'></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/chart.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
@@ -384,12 +444,18 @@
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mCustomScrollbar.min.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textEffect.jquery.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/verticaltabs.pack.js"></script>
+	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-cycle.js"></script>
 
-
-    <script type="text/javascript">
+	<script type="text/javascript">
 	$(document).ready(function(){
 		$("#textExample").verticaltabs({speed: 500,slideShow: false,activeIndex: 2});
 		$("#imageExample").verticaltabs({speed: 1000,slideShow: true,slideShowSpeed: 3000,activeIndex: 0,playPausePos: "topRight"});
+	});
+	</script>
+
+	<script type="text/javascript">
+	$(function(){
+		$("ul#ticker01").liScroll({travelocity: 0.1});
 	});
 	</script>
 
@@ -397,7 +463,7 @@
 	$(function(){
 
 		$("#typed").typed({
-			strings: ["SELAMAT DATANG DI TEKNIK INFORMATIKA", "INSTITUT TEKNOLOGI SEPULUH NOPEMBER"],
+			strings: ["SELAMAT DATANG DI TEKNIK INFORMATIKA", "FAKULTAS TEKNOLOGI INFORMASI", "INSTITUT TEKNOLOGI SEPULUH NOPEMBER"],
 			typeSpeed: 100,
 			backDelay: 5000,
 			loop: true,
@@ -424,11 +490,7 @@
 	        };
 	        var map = new google.maps.Map(document.getElementById('map-canvas'),
 	              mapOptions);
-
-	        var weatherLayer = new google.maps.weather.WeatherLayer({
-			    temperatureUnits: google.maps.weather.TemperatureUnit.FAHRENHEIT
-			  });
-			  weatherLayer.setMap(map);
+	        
 
 			var cloudLayer = new google.maps.weather.CloudLayer();
 			  cloudLayer.setMap(map);
@@ -469,7 +531,7 @@
     
     <script>
 			jQuery(document).ready(function($) {
-				$('h2').textEffect();
+				//$('h2').textEffect();
 
 				$('button.non-reverse').on('click', function(e) {
 					e.preventDefault();
@@ -497,7 +559,53 @@
 					$buttons.attr('disabled', false);
 				}, 3500);
 			}
-	</script>          
+	</script>  
+
+
+	<script type="text/javascript">
+		$(function(){
+
+		    var loc = '60185';
+		    var u = 'c';
+
+		    var query = "SELECT item.condition FROM weather.forecast WHERE location='" + loc + "' AND u='" + u + "'";
+		    var cacheBuster = Math.floor((new Date().getTime()) / 1200 / 1000);
+		    var url = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent(query) + '&format=json&_nocache=' + cacheBuster;
+
+		    window['wxCallback'] = function(data) {
+		        var info = data.query.results.channel.item.condition;
+		        $('#wxIcon').css({
+		            backgroundPosition: '-' + (61 * info.code) + 'px 0'
+		        }).attr({
+		            title: info.text
+		        });
+		        $('#wxIcon2').append('<img src="http://l.yimg.com/a/i/us/we/52/' + info.code + '.gif" width="34" height="34" title="' + info.text + '" />');
+		        $('#wxTemp').html(info.temp + '&deg;' + (u.toUpperCase()));
+		    };
+
+		    $.ajax({
+		        url: url,
+		        dataType: 'jsonp',
+		        cache: true,
+		        jsonpCallback: 'wxCallback'
+		    });
+		    
+		});
+	</script>
+ 
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+		    $('.slideshow').cycle({
+				fx:      'turnDown', 
+		    	delay:   -4000,
+		    	after:     function() {
+		            $('#caption').html(this.alt);
+		        }
+
+			});
+		});
+	</script>       
 
     <script>
     		$('a[href*=#]').click(function(e) {
@@ -665,6 +773,53 @@
 			  $(window).trigger('resize');
 			  return false;
 			});
+		</script>
+
+		<script type="text/javascript">
+			function hasClass(ele,cls) {
+			    return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+			}
+
+			function addClass(ele,cls) {
+			    if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+			}
+
+			function removeClass(ele,cls) {
+			    if (hasClass(ele,cls)) {
+			        var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+			        ele.className=ele.className.replace(reg,' ');
+			    }
+			}
+
+			function hideLinkedContents(container) {
+			    var links = container.getElementsByTagName('area'),
+			    i;
+			    for (i = 0; i < links.length; i += 1) {
+			        addClass(document.querySelector(links[i].hash), 'hidden');
+			    }
+			}
+			function showContent(obj) {
+			    var target = document.querySelector(obj.hash);
+			    removeClass(target, 'hidden');
+			    //target.innerHTML='This is where the xml variable content for ' + obj.hash + ' should go';
+
+			    return true;
+			}
+			function contentLinksHandler(evt) {
+			    evt = evt || window.event;
+			    var targ = evt.target || evt.srcElement;
+			    if (targ.nodeType === 3) {
+			        targ = targ.parentNode; // fix opera bug
+			    }
+			    if (targ.nodeType === 1 && targ.nodeName === 'AREA') {
+			        hideLinkedContents(this);
+			        showContent(targ);
+			    }
+			}
+			var contentLinks = document.querySelector('.contentLinks');
+			hideLinkedContents(contentLinks);
+			contentLinks.onclick = contentLinksHandler;
+
 		</script>
 </body>
 </html>
