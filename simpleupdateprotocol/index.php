@@ -126,9 +126,9 @@ function getTwitter() {
             }
         }
     }
-    unlink('twitter1.xml'); 
-    unlink('twitter2.xml'); 
-    unlink('twitter3.xml'); 
+    //unlink('twitter1.xml'); 
+    //unlink('twitter2.xml'); 
+    //unlink('twitter3.xml'); 
 }
 
 function getDetik() {

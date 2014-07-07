@@ -109,8 +109,9 @@ class SiteController extends Controller
 		$dosen=Staf::model()->find();		
 		$berita=News::model()->find(array('source' => 'Twitter'));		
 		$konten=Konten::model()->find();
+		$utama=Utama::model()->find();
 		//$berita = Yii::app()->mongodb->news->find(array('source' => 'Twitter @hmtc_its'));
-		$this->render('index',array('dosen'=>$dosen,'berita'=>$berita,'model'=>$model, 'konten'=>$konten, 'sheet_array' => $sheet_array) );
+		$this->render('index',array('dosen'=>$dosen,'berita'=>$berita, 'utama'=>$utama,'model'=>$model, 'konten'=>$konten, 'sheet_array' => $sheet_array) );
 			
 
 		

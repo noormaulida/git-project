@@ -7,8 +7,8 @@ class Staf extends EMongoDocument
     public $path;
     public $type;
     public $email;
-    public $bidang_penelitian;
-
+    public $bidang_penelitian;// = array();
+    public $jabatan;// = array();
 
 
     public static function model($className = __CLASS__)
@@ -45,6 +45,8 @@ class Staf extends EMongoDocument
             'name' => 'Nama',
             'nip' => 'NIP',
             'path' => 'Path',
+            array('bidang_penelitian' => 'Bidang_penelitian'),
+            array('jabatan' => 'Jabatan'),
         );
     }
 
